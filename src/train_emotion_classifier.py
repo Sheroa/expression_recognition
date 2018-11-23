@@ -17,7 +17,7 @@ from utils.preprocessor import preprocess_input
 
 # parameters
 batch_size = 32
-num_epochs = 100
+num_epochs = 2000
 input_shape = (64, 64, 1)
 validation_split = .2
 verbose = 1

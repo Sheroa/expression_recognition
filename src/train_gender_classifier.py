@@ -15,7 +15,7 @@ from utils.datasets import split_imdb_data
 
 # parameters
 batch_size = 32
-num_epochs = 50
+num_epochs = 10000
 validation_split = .2
 do_random_crop = False
 patience = 100
