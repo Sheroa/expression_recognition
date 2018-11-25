@@ -15,8 +15,9 @@ from utils.preprocessor import preprocess_input
 
 # parameters for loading data and images
 image_path = sys.argv[1]
+output_path = sys.argv[2]
 detection_model_path = '../trained_models/detection_models/haarcascade_frontalface_default.xml'
-emotion_model_path = '../trained_models/emotion_models/fer2013_mini_XCEPTION.102-0.66.hdf5'
+emotion_model_path = '../trained_models/emotion_models/fer2013_mini_XCEPTION.63-0.65.hdf5'
 gender_model_path = '../trained_models/gender_models/simple_CNN.81-0.96.hdf5'
 emotion_labels = get_labels('fer2013')
 gender_labels = get_labels('imdb')
@@ -36,6 +37,8 @@ gender_classifier = load_model(gender_model_path, compile=False)
 # getting input model shapes for inference
 emotion_target_size = emotion_classifier.input_shape[1:3]
 gender_target_size = gender_classifier.input_shape[1:3]
+
+print(emotion_target_size)
 
 # loading images
 rgb_image = load_image(image_path, grayscale=False)
@@ -79,4 +82,4 @@ for face_coordinates in faces:
     draw_text(face_coordinates, rgb_image, emotion_text, color, 0, -50, 1, 2)
 
 bgr_image = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2BGR)
-cv2.imwrite('../images/predicted_test_image.png', bgr_image)
+cv2.imwrite(output_path, bgr_image)
