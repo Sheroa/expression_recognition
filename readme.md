@@ -23,7 +23,9 @@ python3 -m pip install --upgrade https://storage.googleapis.com/tensorflow/mac/c
 python3 image_emotion_gender_demo.py input_image output_image
 ```
 input_image: the path of input image
+
 output_image: the path of output image
+
 example: 
 ```bash
 python3 image_emotion_gender_demo.py ../images/professor.png ../images/professor_result.png
