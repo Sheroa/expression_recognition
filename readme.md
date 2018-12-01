@@ -10,8 +10,13 @@ It is a project of my master class: Image Process. We focus on facial expression
 The main code is in the folder named src and there are three main file: two for training and one for using the model to recognize images.
 ## how to recognize
 - to use our program, you have to install python and other packages.
+I use python3.7.0. So, if it is cannot install, please upload your python.
 ```bash
 pip install -r REQUIREMENTS.txt
+```
+you may can't install the tensorflow 1.1.0. Please use the following command:
+```bash
+python3 -m pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.1.0-py3-none-any.whl
 ```
 - then you can use the following command to use
 ```bash
