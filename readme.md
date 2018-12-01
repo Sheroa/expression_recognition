@@ -24,7 +24,10 @@ python3 image_emotion_gender_demo.py input_image output_image
 ```
 input_image: the path of input image
 output_image: the path of output image
-example: python3 image_emotion_gender_demo.py ../images/professor.png ../images/professor_result.png
+example: 
+```bash
+python3 image_emotion_gender_demo.py ../images/professor.png ../images/professor_result.png
+```
 
 ## how to train
  - datasets:
