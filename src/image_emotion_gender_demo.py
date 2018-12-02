@@ -14,7 +14,7 @@ from utils.inference import load_image
 from utils.preprocessor import preprocess_input
 
 # parameters for loading data and images
-image_path = sys.argv[1]
+input_path = sys.argv[1]
 output_path = sys.argv[2]
 detection_model_path = '../trained_models/detection_models/haarcascade_frontalface_default.xml'
 emotion_model_path = '../trained_models/emotion_models/fer2013_mini_XCEPTION.63-0.65.hdf5'
@@ -41,8 +41,8 @@ gender_target_size = gender_classifier.input_shape[1:3]
 print(emotion_target_size)
 
 # loading images
-rgb_image = load_image(image_path, grayscale=False)
-gray_image = load_image(image_path, grayscale=True)
+rgb_image = load_image(input_path, grayscale=False)
+gray_image = load_image(input_path, grayscale=True)
 gray_image = np.squeeze(gray_image)
 gray_image = gray_image.astype('uint8')
 
